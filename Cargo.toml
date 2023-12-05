@@ -1,0 +1,23 @@
+[package]
+name = "cut-video"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ffmpeg-next = "6.1.0"
+rocket = { version = "0.5.0", features = ["json"] }
+rocket_dyn_templates = { version = "0.1.0", features = ["tera", "handlebars"] }
+
+[[bin]]
+name = "devserver"
+path = "src/server.rs"
+
+[[bin]]
+name = "video"
+path = "src/main.rs"
+
+[[bin]]
+name = "mini"
+path = "src/mini.rs"
